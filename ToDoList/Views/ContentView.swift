@@ -23,17 +23,18 @@ struct ContentView: View {
     
     @ViewBuilder
     var accountView: some View {
-        TabView {
-            ToDoListView(userId: viewModel.currentUserID)
-                .tabItem{
-                    Label("Home", systemImage: "house")
-                }
-            ProfileView()
-                .tabItem{
-                    Label("Profile", systemImage: "person.circle")
-                }
+                        
+            TabView {
+                ToDoListView(userId: viewModel.currentUserID)
+                    .tabItem{
+                        Label("Home", systemImage: "house")
+                    }
+                ProfileView()
+                    .tabItem{
+                        Label("Profile", systemImage: "person.circle")
+                    }
+            }
         }
-    }
 }
 
 struct ContentView_Preview: PreviewProvider {
